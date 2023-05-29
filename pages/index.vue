@@ -21,25 +21,31 @@ export default {
         {
           title: '幸運輪盤',
           img: '/roulette/banner.png',
+          components: '/roulette',
         },
         {
           title: '5PK',
           img: '/roulette/banner.png',
+          components: '/5pk',
         },
         {
           title: '百家樂',
           img: '/roulette/banner.png',
+          components: '/baccarat',
         },
         {
           title: '21點',
           img: '/roulette/banner.png',
+          components: '/blackJack',
         },
       ],
     }
   },
   methods: {
     goGame(gameType) {
-      this.$router.push('/roulette')
+      const goto = gameType.components
+      this.$router.push(goto)
+      // this.$router.push('/roulette')
     },
   },
 }
